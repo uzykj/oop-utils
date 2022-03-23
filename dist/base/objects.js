@@ -29,4 +29,3 @@ class Objects extends Object {
     }
 }
 exports.Objects = Objects;
-//# sourceMappingURL=objects.js.map

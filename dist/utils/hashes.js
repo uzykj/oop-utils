@@ -73,4 +73,3 @@ const DefaultHashOptions = {
     inputEncoding: 'binary',
     encoding: 'hex',
 };
-//# sourceMappingURL=hashes.js.map
