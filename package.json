@@ -1,0 +1,27 @@
+{
+  "name": "oop-utils",
+  "version": "0.0.1",
+  "description": "Object oriented related tool classes",
+  "author": "ghostxbh",
+  "scripts": {},
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ghostxbh/oop-utils"
+  },
+  "homepage": "",
+  "keywords": [
+    "class",
+    "oop",
+    "Objects",
+    "Arrays",
+    "Maps",
+    "Sets",
+    "utils",
+    "uzy"
+  ],
+  "license": "Apache License 2.0",
+  "devDependencies": {
+    "@types/node": "^16.0.0",
+    "typescript": "^4.3.5"
+  }
+}
