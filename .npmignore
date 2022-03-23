@@ -1,0 +1,11 @@
+node_modules/
+karma.conf.cjs
+.travis.yml
+tsconfig-base.json
+package-lock.json
+.idea
+.git
+
+.editorconfig
+.gitignore
+.releaserc
