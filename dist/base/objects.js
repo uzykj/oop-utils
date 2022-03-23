@@ -1,5 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
+exports.Objects = void 0;
 const hashes_1 = require("../utils/hashes");
 class Objects extends Object {
     static equals(a, b) {
