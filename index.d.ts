@@ -1,2 +1,2 @@
-export {Objects} from './src/base/objects'
-export {Hashes} from './src/utils/hashes'
+export {Objects} from './dist/base/objects'
+export {Hashes} from './dist/utils/hashes'

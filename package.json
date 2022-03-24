@@ -1,6 +1,6 @@
 {
   "name": "@uzykj/oop-utils",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "Object oriented related tool classes",
   "author": "ghostxbh",
   "scripts": {
@@ -19,6 +19,8 @@
     "Maps",
     "Sets",
     "utils",
+    "Nestjs",
+    "Nest",
     "uzy"
   ],
   "license": "Apache-2.0",
@@ -30,5 +32,7 @@
     "url": "https://github.com/ghostxbh/oop-utils/issues"
   },
   "main": "index.js",
-  "dependencies": {}
+  "dependencies": {
+    "node-redis-pool-gddata": "^1.1.0"
+  }
 }
