@@ -1,6 +1,6 @@
 {
   "name": "@uzykj/oop-utils",
-  "version": "0.0.6",
+  "version": "0.0.7",
   "description": "Object oriented related tool classes",
   "author": "ghostxbh",
   "scripts": {
@@ -8,9 +8,9 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/ghostxbh/oop-utils.git"
+    "url": "git+https://github.com/uzykj/oop-utils.git"
   },
-  "homepage": "https://github.com/ghostxbh/oop-utils#readme",
+  "homepage": "https://github.com/uzykj/oop-utils#readme",
   "keywords": [
     "oop",
     "Guava",
@@ -27,6 +27,6 @@
     "typescript": "^4.3.5"
   },
   "bugs": {
-    "url": "https://github.com/ghostxbh/oop-utils/issues"
+    "url": "https://github.com/uzykj/oop-utils/issues"
   }
 }
