@@ -1,6 +1,6 @@
 import {Absent} from "./absent";
 import OptionalConstant from "../lib/constants/optional.constant";
-import {OptionalException} from "../lib/exception/optional.exception";
+import {OptionalException} from "../lib/exception/exceptions";
 
 /**
  * @author ghostxbh
@@ -55,7 +55,7 @@ export class Present {
 
   /**
    * Returns the wrapped item or null.
-   * @returns {Object|undefined} - If the wrapped item exists, it will be returned, else this function will return null.
+   * @returns {Object|null} - If the wrapped item exists, it will be returned, else this function will return null.
    */
   public orNull() {
     return (this._item) ? this._item : null;
