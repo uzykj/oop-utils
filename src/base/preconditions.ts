@@ -44,7 +44,7 @@ export class Preconditions {
    * @param {*} errorMessageArgs error message args
    */
   public static checkNotNull(reference: any, errorMessage?: string | any, ...errorMessageArgs: any): any {
-    if (reference === null || reference === undefined) {
+    if (!reference) {
       throw new NullPointerException(this.format(errorMessage, errorMessageArgs));
     }
     return reference;

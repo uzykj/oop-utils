@@ -38,14 +38,6 @@ export class Absent {
   }
 
   /**
-   * Always returns undefined because the Absent object has no value.
-   * @returns {undefined}
-   */
-  public static orUndefined(): undefined {
-    return undefined;
-  }
-
-  /**
    * Always returns null because the Absent object has no value.
    * @returns {null}
    */

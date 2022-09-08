@@ -46,14 +46,6 @@ export class Present {
   }
 
   /**
-   * Returns the wrapped item or undefined.
-   * @returns {Object|undefined} - If the wrapped item exists, it will be returned, else this function will return undefined.
-   */
-  public orUndefined() {
-    return (this._item) ? this._item : undefined;
-  }
-
-  /**
    * Returns the wrapped item or null.
    * @returns {Object|null} - If the wrapped item exists, it will be returned, else this function will return null.
    */
