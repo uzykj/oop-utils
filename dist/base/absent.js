@@ -19,9 +19,6 @@ class Absent {
         }
         return secondChoice;
     }
-    static orUndefined() {
-        return undefined;
-    }
     static orNull() {
         return null;
     }

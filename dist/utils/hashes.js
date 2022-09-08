@@ -29,7 +29,7 @@ class Hashes {
         }
     }
     static hashCode(a) {
-        if (a === null || a === undefined)
+        if (!a)
             return 0;
         let result = 1;
         if (Array.isArray(a)) {
@@ -44,7 +44,7 @@ class Hashes {
         return result;
     }
     static nativeHashCode(o) {
-        if (o === null || o === undefined)
+        if (!o)
             return 0;
         try {
             const str = typeof o === "object" ? JSON.stringify(o) : o;

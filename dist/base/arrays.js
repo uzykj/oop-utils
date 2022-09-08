@@ -29,5 +29,22 @@ class Arrays extends Array {
         }
         return result;
     }
+    static pagination(pageNo = 1, pageSize = 10, array = []) {
+        const offset = (pageNo - 1) * pageSize;
+        return array && array.length > 0
+            ? offset + pageSize >= array.length
+                ? array.slice(offset, array.length)
+                : array.slice(offset, offset + pageSize)
+            : [];
+    }
+    static to2dArray(array = [], width) {
+        const list = [];
+        for (let i = 0; i < array.length; i++) {
+            const index = width > array.length ? array.length : width;
+            const tmpArray = array.splice(0, index);
+            list.push(tmpArray);
+        }
+        return list;
+    }
 }
 exports.Arrays = Arrays;

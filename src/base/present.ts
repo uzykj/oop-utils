@@ -1,6 +1,6 @@
 import {Absent} from "./absent";
 import OptionalConstant from "../lib/constants/optional.constant";
-import {OptionalException} from "../lib/exception/exceptions";
+import { OptionalException } from "../lib/exception/optional.exception";
 
 /**
  * @author ghostxbh
@@ -58,7 +58,7 @@ export class Present {
    * @returns {Boolean} - If the wrapped item exists, this function will return true, else false.
    */
   public isPresent() {
-    return this._item !== undefined && this._item !== null;
+    return !this._item;
   }
 
   /**

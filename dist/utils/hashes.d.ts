@@ -1,4 +1,5 @@
 /// <reference types="node" />
+/// <reference types="node" />
 import { Encoding, BinaryToTextEncoding } from "crypto";
 export declare class Hashes {
     static hashBuffer(o: any, options?: HashOptions): Buffer;

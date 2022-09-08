@@ -1,6 +1,7 @@
 import {Objects} from "./objects";
 import OptionalConstant from "../lib/constants/optional.constant";
-import {OptionalException} from "../lib/exception/exceptions";
+import { OptionalException } from "../lib/exception/optional.exception";
+
 
 /**
  * @author ghostxbh

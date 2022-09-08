@@ -3,7 +3,6 @@ export declare class Present {
     constructor(item: object);
     get(): object;
     or(secondChoice: any): any;
-    orUndefined(): object;
     orNull(): object;
     isPresent(): boolean;
     transform(func: any): any;

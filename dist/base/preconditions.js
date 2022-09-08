@@ -17,7 +17,7 @@ class Preconditions {
         }
     }
     static checkNotNull(reference, errorMessage, ...errorMessageArgs) {
-        if (reference === null || reference === undefined) {
+        if (!reference) {
             throw new null_exception_1.NullPointerException(this.format(errorMessage, errorMessageArgs));
         }
         return reference;

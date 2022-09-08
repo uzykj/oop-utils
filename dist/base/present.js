@@ -20,14 +20,11 @@ class Present {
         }
         return this._item || secondChoice;
     }
-    orUndefined() {
-        return (this._item) ? this._item : undefined;
-    }
     orNull() {
         return (this._item) ? this._item : null;
     }
     isPresent() {
-        return this._item !== undefined && this._item !== null;
+        return !this._item;
     }
     transform(func) {
         if (typeof func !== 'function') {

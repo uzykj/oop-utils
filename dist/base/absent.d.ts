@@ -3,7 +3,6 @@ export declare class Absent {
     static withType(): Absent;
     static get(): void;
     static or(secondChoice: any): any;
-    static orUndefined(): undefined;
     static orNull(): null;
     static isPresent(): boolean;
     static transform(): Absent;
