@@ -77,4 +77,122 @@ export class Arrays extends Array {
     }
     return list;
   }
+      
+  /**
+   * <h3>CN: 字符串转数值数组，数组转字符串。</h3>
+   * <h3>EN: String to Numeric Array, Array to String.</h3>
+   * @param {string|number[]} str
+   */
+  static transferStrAndArray<T extends string | number[]>(str: string | number[]): T {
+    if (!str) {
+      return <T>[];
+    }
+
+    const isInteger = function (param) {
+      return param % 1 === 0;
+    };
+
+    let result;
+    if (str) {
+      if (typeof str === 'string' && str.includes(',')) {
+        const split = str.split(',');
+        result = [];
+        split.forEach((s) => {
+          if (!isNaN(Number(s))) {
+            result.push(isInteger(s) ? parseInt(s) : parseFloat(s));
+          }
+        });
+      } else if (Array.isArray(str)) {
+        result = str.join(',');
+      }
+    }
+    return result;
+  }
+      
+  /**
+   * <h3>CN: 字符串解析数组。</h3>
+   * <h3>EN: String parsing array.</h3>
+   * @param {string} value
+   */
+  static parseArray(value: string): any {
+    if (!value) return;
+
+    //判断是否存在数组的字符
+    if (value.includes('[') && value.includes(']')) {
+      //只替换第一个数组字符
+      value = value.replace(/\[/, '');
+    }
+
+    //判断数组中括号的结尾符
+    const lastIndexOf = value.lastIndexOf(']');
+    if (lastIndexOf > -1) {
+      value = value.substring(0, lastIndexOf);
+    }
+
+    //暂时处理不了多维数组
+    if (value.includes('[') || value.includes(']')) {
+      throw new Error('Parse error, cannot parse multidimensional array.');
+    }
+
+    let result = [];
+    const array = value.split(',');
+    for (let i = 0; i < array.length; i++) {
+      const item = array[i];
+      if (item === 'true' || item === 'false') {
+        result.push(item === 'true');
+      } else if (!isNaN(Number(item))) {
+        result.push(parseFloat(item));
+      } else {
+        result = array;
+        break;
+      }
+    }
+    return result;
+  }
+  
+  /**
+   * <h3>CN: 重新调整数组大小。如果大于新的长度，直接根据新长度下标截取原数组。如果小于新长度，则添加指定的新元素。</h3>
+   * <h3>EN: Resize the array. If it is greater than the new length, the array is directly truncated according to the new length subscript. If less than the new length, add the specified new element.</h3>
+   * @param {any[]} metaData
+   * @param {number} newSize
+   * @param {*} newItem
+   */
+  static resize(metaData: any[], newSize: number, newItem?: any): any[] {
+    const len = metaData.length;
+    if (len > newSize) {
+      metaData.splice(newSize, len - newSize);
+    } else if (len < newSize) {
+      const dis = newSize - len;
+      const items = [];
+      for (let i = 0; i < dis; i++) {
+        items.push(newItem);
+      }
+      metaData = metaData.concat(items);
+    }
+    return metaData;
+  }
+      
+  /**
+   * <h3>CN: 判断2个数组是否包含相同的元素及顺序。</h3>
+   * <h3>EN: Determines whether two arrays contain the same elements and in the same order.</h3>
+   * @param {any[]} a1
+   * @param {any[]} a2
+   */
+  static equals(a1: any[], a2: any[]): boolean {
+    // if the other array is a falsy value, return
+    if (!a1 || !a2) return false;
+    // compare lengths - can save a lot of time
+    if (a1.length != a2.length) return false;
+    for (var i = 0, l = a1.length; i < l; i++) {
+      // Check if we have nested arrays
+      if (a1[i] instanceof Array && a2[i] instanceof Array) {
+        // recurse into the nested arrays
+        if (!a1[i].equals(a2[i])) return false;
+      } else if (a1[i] != a2[i]) {
+        // Warning - two different object instances will never be equal: {x:20} != {x:20}
+        return false;
+      }
+    }
+    return true;
+  }
 }
