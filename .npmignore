@@ -1,4 +1,6 @@
+src/
 node_modules/
+
 karma.conf.cjs
 .travis.yml
 tsconfig-base.json
